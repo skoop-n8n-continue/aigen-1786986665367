@@ -1,0 +1,309 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #e5e5e5;
+    color: #333;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.menu-container {
+    width: 100%;
+    height: 100%;
+    background-color: #f7f7f7;
+    padding: 1vw 1.5vw;
+}
+
+.menu-page {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.grid-layout-p1 {
+    display: grid;
+    grid-template-columns: 1fr 1.1fr 1fr;
+    grid-template-rows: auto 1fr;
+    gap: 1.5vw;
+    height: 100%;
+}
+
+.grid-layout-p2 {
+    display: grid;
+    grid-template-columns: 1.1fr 1.1fr 1fr;
+    gap: 1.5vw;
+    height: 100%;
+}
+
+.col-full {
+    grid-column: 1 / -1;
+}
+
+.section-box {
+    background: #fff;
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+}
+
+.section-header {
+    background-color: #d32f2f;
+    color: white;
+    font-family: 'Oswald', sans-serif;
+    font-size: 2.2vw;
+    font-weight: 700;
+    padding: 0.5vw 1vw;
+    text-align: center;
+    letter-spacing: 1px;
+}
+
+.section-content {
+    padding: 1vw;
+}
+
+.menu-item {
+    margin-bottom: 0.8vw;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.item-main {
+    display: flex;
+    align-items: center;
+    gap: 0.5vw;
+    width: 75%;
+}
+
+.item-name {
+    font-weight: 700;
+    font-size: 1.1vw;
+    text-transform: uppercase;
+}
+
+.badge {
+    background-color: #2e7d32;
+    color: white;
+    font-size: 0.6vw;
+    padding: 0.1vw 0.4vw;
+    border-radius: 2px;
+    font-weight: 700;
+    vertical-align: middle;
+}
+
+.item-desc {
+    font-size: 0.8vw;
+    color: #555;
+    width: 100%;
+    margin-top: 0.1vw;
+}
+
+.item-price {
+    font-weight: 700;
+    font-size: 1vw;
+    text-align: right;
+    width: 25%;
+    display: flex;
+    justify-content: flex-end;
+    gap: 0.5vw;
+}
+
+.item-subtitle {
+    color: #d32f2f;
+    font-size: 0.8vw;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 0.8vw;
+}
+
+.mt-3 { margin-top: 1.5vw; }
+.mt-2 { margin-top: 1vw; }
+.mt-1 { margin-top: 0.5vw; }
+.red-text { color: #d32f2f; }
+.green-text { color: #2e7d32; }
+.font-bold { font-weight: 700; }
+.text-sm { font-size: 0.9vw; }
+
+/* Pizza Layouts */
+.pizza-header-row {
+    display: flex;
+    justify-content: flex-end;
+    font-size: 0.9vw;
+    font-weight: 700;
+    color: #d32f2f;
+    margin-bottom: 0.5vw;
+}
+
+.pizza-sizes {
+    width: 50%;
+    text-align: right;
+    letter-spacing: 2px;
+}
+
+.pizza-item .item-main { width: 50%; }
+.pizza-item .item-price { width: 50%; font-size: 1vw; word-spacing: 0.3vw; justify-content: flex-end; font-weight: 500;}
+.pizza-item .item-desc { width: 60%; }
+
+/* Crunchimos layout */
+.crunchimo-item .item-main { width: 100%; }
+.crunchimo-item .item-price { display: none; } /* Prices in screenshot were somewhat vague, hidden or custom */
+
+/* Build Your Own Box */
+.build-your-own-box {
+    border: 2px solid #e0e0e0;
+    border-radius: 4px;
+    background: #fdfdfd;
+    display: flex;
+    padding: 1vw;
+}
+
+.byo-title {
+    font-family: 'Oswald', sans-serif;
+    color: #d32f2f;
+    font-size: 2.5vw;
+    font-weight: 700;
+    line-height: 1.1;
+    width: 15%;
+    display: flex;
+    align-items: center;
+}
+
+.byo-pizza-details {
+    width: 55%;
+    border-right: 1px solid #ccc;
+    padding-right: 2vw;
+}
+
+.byo-crunchimos {
+    width: 30%;
+    padding-left: 2vw;
+}
+
+.byo-section-title {
+    color: #d32f2f;
+    font-size: 1.5vw;
+    font-weight: 700;
+    margin-bottom: 0.5vw;
+}
+
+.byo-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.4vw;
+}
+
+.byo-name {
+    font-weight: 700;
+    font-size: 1vw;
+}
+
+.byo-prices {
+    font-weight: 500;
+    font-size: 1vw;
+}
+
+.toppings-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    font-size: 0.8vw;
+    gap: 0.5vw;
+    font-weight: 500;
+    line-height: 1.4;
+}
+
+.toppings-title {
+    color: #d32f2f;
+    font-weight: 700;
+    font-size: 1vw;
+    margin-bottom: 0.5vw;
+}
+
+/* Page 2 Specifics */
+.salad-header { justify-content: flex-end; width: 100%; }
+.salad-header span:last-child { width: 35%; text-align: right; }
+.salad-item .item-main { width: 65%; }
+.salad-item .item-price { width: 35%; justify-content: flex-end; word-spacing: 0.3vw; font-weight: 500; }
+.salad-item .item-desc { width: 70%; }
+
+.add-chicken-box {
+    display: flex;
+    align-items: center;
+}
+.add-c-title {
+    font-weight: 700;
+    font-size: 1vw;
+    width: 40%;
+}
+.add-c-prices {
+    width: 60%;
+    font-size: 0.9vw;
+    font-weight: 500;
+}
+.ac-row { display: flex; justify-content: space-between; margin-bottom: 0.2vw; }
+
+.d-title { font-weight: 700; font-size: 1vw; }
+.d-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    font-size: 0.8vw;
+    font-weight: 500;
+    line-height: 1.3;
+}
+
+/* Drinks Section */
+.drinks-box {
+    border: 2px solid #d32f2f;
+}
+.drinks-box .section-header {
+    background: transparent;
+    color: #d32f2f;
+    font-size: 1.8vw;
+    text-align: center;
+}
+.drinks-content {
+    display: flex;
+    align-items: center;
+}
+.drinks-logo {
+    width: 30%;
+    display: flex;
+    justify-content: center;
+}
+.pepsi-circle {
+    width: 5vw;
+    height: 5vw;
+    border-radius: 50%;
+    background: #004b93;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.2vw;
+    font-weight: 700;
+    border: 0.3vw solid #d32f2f;
+    box-shadow: inset 0 0 0 0.3vw white;
+}
+.drinks-pricing {
+    width: 70%;
+}
+.drinks-sizes, .drinks-row {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1vw;
+    font-weight: 500;
+}
+.drinks-sizes { color: #d32f2f; font-weight: 700; font-size: 0.9vw; }
+.drink-name { font-weight: 700; width: 50%; }
+.drinks-row span:not(.drink-name), .drinks-sizes span:not(:first-child) {
+    width: 25%;
+    text-align: right;
+}
