@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant Menu Board</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f8f8f8;
+            color: #333;
+            width: 100vw;
+            height: 100vh;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            padding: 2vw;
+        }
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 2vh;
+        }
+
+        .column-container {
+            display: flex;
+            flex-direction: row;
+            gap: 2vw;
+            height: 100%;
+        }
+
+        .column {
+            display: flex;
+            flex-direction: column;
+            gap: 2vh;
+        }
+
+        .col-left {
+            flex: 1;
+        }
+
+        .col-middle {
+            flex: 1.2;
+        }
+
+        .col-right {
+            flex: 1;
+        }
+
+        .section-header {
+            background-color: #d13239;
+            color: white;
+            text-align: center;
+            padding: 1vh 0;
+            font-size: 2.5vw;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .section-content {
+            padding: 1vh 0;
+            font-size: 1.2vw;
+        }
+
+        .item {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 1vh;
+            align-items: baseline;
+        }
+
+        .item-name {
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+
+        .item-desc {
+            font-size: 0.9vw;
+            color: #666;
+            margin-bottom: 0.5vh;
+            max-width: 80%;
+        }
+
+        .item-price {
+            font-weight: bold;
+            white-space: nowrap;
+        }
+        
+        .calories {
+            font-size: 0.8vw;
+            color: #555;
+            text-align: right;
+            margin-top: -0.5vh;
+            margin-bottom: 1vh;
+        }
+
+        .favorite-tag {
+            background-color: #2e8b57;
+            color: white;
+            font-size: 0.8vw;
+            padding: 2px 5px;
+            border-radius: 3px;
+            margin-left: 5px;
+            vertical-align: middle;
+        }
+
+        .subtitle {
+            color: #d13239;
+            font-weight: bold;
+            font-size: 1vw;
+            text-transform: uppercase;
+            margin-bottom: 1vh;
+        }
+
+        .pizza-sizes {
+            display: flex;
+            justify-content: flex-end;
+            gap: 1.5vw;
+            color: #d13239;
+            font-weight: bold;
+            font-size: 1.2vw;
+            margin-bottom: 1vh;
+            padding-right: 1vw;
+        }
+        
+        .pizza-prices {
+            display: flex;
+            justify-content: flex-end;
+            gap: 1vw;
+            font-weight: bold;
+        }
+        
+        .pizza-prices span {
+             min-width: 3vw;
+             text-align: right;
+        }
+        
+        .pizza-item-container {
+             display: flex;
+             justify-content: space-between;
+             margin-bottom: 1vh;
+        }
+        
+        .pizza-details {
+             flex: 1;
+        }
+
+        .build-your-own-box {
+            border: 2px solid #d13239;
+            padding: 2vh 2vw;
+            display: flex;
+            margin-top: 2vh;
+            background-color: #f8f8f8;
+        }
+        
+        .byo-title {
+             color: #d13239;
+             font-size: 2.5vw;
+             font-weight: bold;
+             line-height: 1;
+             display: flex;
+             align-items: center;
+             padding-right: 2vw;
+             border-right: 1px solid #ccc;
+        }
+        
+        .byo-content {
+             display: flex;
+             flex: 1;
+             padding-left: 2vw;
+             gap: 2vw;
+        }
+        
+        .byo-col {
+             flex: 1;
+        }
+        
+        .byo-header {
+             color: #d13239;
+             font-size: 1.8vw;
+             font-weight: bold;
+             text-align: center;
+             margin-bottom: 1vh;
+        }
+        
+        .byo-pizza-row {
+             display: flex;
+             justify-content: space-between;
+             margin-bottom: 0.5vh;
+             font-size: 1vw;
+        }
+
+        .toppings-section {
+            margin-top: 2vh;
+            display: flex;
+        }
+        
+        .toppings-title {
+             color: #d13239;
+             font-weight: bold;
+             font-size: 1.5vw;
+             margin-right: 2vw;
+        }
+        
+        .toppings-list {
+             display: grid;
+             grid-template-columns: repeat(4, 1fr);
+             gap: 0.5vw;
+             font-size: 0.9vw;
+             flex: 1;
+        }
+        
+        .image-container {
+             text-align: center;
+             margin-top: auto;
+        }
+        
+        .image-container img {
+             max-width: 100%;
+             height: auto;
+             object-fit: contain;
+             max-height: 25vh;
+        }
+        
+        .fine-print {
+             font-size: 0.7vw;
+             text-align: center;
+             margin-top: auto;
+             padding-top: 1vh;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="column-container">
+        <!-- LEFT COLUMN -->
+        <div class="column col-left">
+            <div>
+                <div class="section-header">APPETIZERS</div>
+                <div class="section-content">
+                    <div class="item">
+                        <div class="item-name">TOASTED RAVIOLI <span class="favorite-tag">FAVORITE</span></div>
+                        <div class="item-price">(8) 8.95 (24) 25.95</div>
+                    </div>
+                    <div class="calories">480-1370 CAL</div>
+                    
+                    <div class="item">
+                        <div>
+                            <div class="item-name">GARLIC CHEESE BREAD <span class="favorite-tag">FAVORITE</span></div>
+                            <div class="item-desc">With a side of meat sauce</div>
+                        </div>
+                        <div class="item-price">5.95</div>
+                    </div>
+                    <div class="calories">790 CAL</div>
+                    
+                    <div class="item">
+                        <div>
+                            <div class="item-name">PROVEL BITES <span class="favorite-tag">FAVORITE</span></div>
+                            <div class="item-desc">With a side of meat sauce</div>
+                        </div>
+                        <div class="item-price">(10) 6.95</div>
+                    </div>
+                    <div class="calories">650 CAL</div>
+
+                    <div class="item">
+                        <div class="item-name">IMO FRIES</div>
+                        <div class="item-price">4.95</div>
+                    </div>
+                    <div class="calories">360 CAL</div>
+                    
+                    <div class="item">
+                        <div>
+                            <div class="item-name">MOZZARELLA STICKS</div>
+                            <div class="item-desc">With a side of meat sauce</div>
+                        </div>
+                        <div class="item-price">(6) 9.95 (24) 29.95</div>
+                    </div>
+                    <div class="calories">520-1560 CAL</div>
+
+                    <div class="item">
+                        <div>
+                            <div class="item-name">BREAD BITES</div>
+                            <div class="item-desc">With a side of meat sauce</div>
+                        </div>
+                        <div class="item-price">(6) 5.45</div>
+                    </div>
+                    <div class="calories">610 CAL</div>
+                </div>
+            </div>
+
+            <div>
+                <div class="section-header">WINGS & TENDERS</div>
+                <div class="section-content">
+                    <div class="subtitle">SERVED WITH A SIDE OF DIPPING SAUCE</div>
+                    
+                    <div class="item">
+                        <div>
+                            <div class="item-name">BONELESS WINGS</div>
+                            <div class="item-desc">Hot, BBQ, Sweet & Tangy, Golden BBQ, Red Hot Riplets dry rub, or Plain</div>
+                        </div>
+                        <div class="item-price">(8) 11.95 (24) 33.95</div>
+                    </div>
+                    <div class="calories">420-1900 CAL</div>
+
+                    <div class="item">
+                        <div>
+                            <div class="item-name">CHICKEN WINGS</div>
+                            <div class="item-desc">Hot, BBQ, Sweet & Tangy, Golden BBQ, Red Hot Riplets dry rub, or Plain</div>
+                        </div>
+                        <div class="item-price">(8) 13.95 (24) 38.95</div>
+                    </div>
+                    <div class="calories">720-2800 CAL</div>
+
+                    <div class="item">
+                        <div class="item-name">CHICKEN TENDERS</div>
+                        <div class="item-price">(4) 9.95 (12) 27.95</div>
+                    </div>
+                    <div class="calories">520-1570 CAL</div>
+                </div>
+                
+                <div class="image-container">
+                     <img src="https://loremflickr.com/600/300/chickenwings?random=1" alt="Wings and Tenders">
+                </div>
+            </div>
+        </div>
+
+        <!-- MIDDLE AND RIGHT COLUMNS COMBINED FOR TOP LAYOUT -->
+        <div style="display: flex; flex-direction: column; flex: 2.2;">
+             <div style="display: flex; gap: 2vw;">
+                 <!-- MIDDLE COLUMN (PIZZAS) -->
+                 <div class="column col-middle">
+                     <div class="section-header">PIZZAS</div>
+                     <div class="section-content">
+                         <div class="pizza-sizes">
+                             <span>10"</span> | <span>12"</span> | <span>14"</span> | <span>16"</span>
+                         </div>
+                         
+                         <div class="pizza-item-container">
+                             <div class="pizza-details">
+                                 <div class="item-name">DELUXE <span class="favorite-tag">FAVORITE</span></div>
+                                 <div class="item-desc">Sausage, bacon, mushroom, onion, & green pepper</div>
+                             </div>
+                             <div class="pizza-prices">
+                                 <span>15.80</span><span>19.95</span><span>23.95</span><span>27.95</span>
+                             </div>
+                         </div>
+                         <div class="calories">1210-3080 CAL</div>
+
+                         <div class="pizza-item-container">
+                             <div class="pizza-details">
+                                 <div class="item-name">ALL MEAT</div>
+                                 <div class="item-desc">Sausage, Canadian bacon, bacon, & pepperoni</div>
+                             </div>
+                             <div class="pizza-prices">
+                                 <span>16.20</span><span>20.55</span><span>24.75</span><span>28.95</span>
+                             </div>
+                         </div>
+                         <div class="calories">1420-3640 CAL</div>
+
+                         <div class="pizza-item-container">
+                             <div class="pizza-details">
+                                 <div class="item-name">SWEET HEAT</div>
+                                 <div class="item-desc">Chicken, onion, bacon, and sweet & tangy sauce</div>
+                             </div>
+                             <div class="pizza-prices">
+                                 <span>14.70</span><span>18.75</span><span>22.80</span><span>26.85</span>
+                             </div>
+                         </div>
+                         <div class="calories">755-3195 CAL</div>
+
+                         <div class="pizza-item-container">
+                             <div class="pizza-details">
+                                 <div class="item-name">VEGGIE</div>
+                                 <div class="item-desc">Mushroom, onion, green pepper, black olive, & tomato</div>
+                             </div>
+                             <div class="pizza-prices">
+                                 <span>15.80</span><span>19.95</span><span>23.95</span><span>27.95</span>
+                             </div>
+                         </div>
+                         <div class="calories">960-2520 CAL</div>
+
+                         <div class="pizza-item-container">
+                             <div class="pizza-details">
+                                 <div class="item-name">BBQ CHICKEN</div>
+                                 <div class="item-desc">BBQ sauce, chicken, & onion</div>
+                             </div>
+                             <div class="pizza-prices">
+                                 <span>12.70</span><span>16.15</span><span>19.55</span><span>22.95</span>
+                             </div>
+                         </div>
+                         <div class="calories">1040-2660 CAL</div>
+
+                         <div class="pizza-item-container">
+                             <div class="pizza-details">
+                                 <div class="item-name">CHEESE</div>
+                                 <div class="item-desc">Covered in Provel cheese</div>
+                             </div>
+                             <div class="pizza-prices">
+                                 <span>10.95</span><span>13.95</span><span>16.95</span><span>19.95</span>
+                             </div>
+                         </div>
+                         <div class="calories">930-2390 CAL</div>
+                     </div>
+                 </div>
+
+                 <!-- RIGHT COLUMN (CRUNCHIMOS) -->
+                 <div class="column col-right">
+                     <div class="section-header">CRUNCHIMOS</div>
+                     <div class="section-content">
+                         <div class="subtitle">SERVED WITH A SIDE OF DIPPING SAUCE</div>
+                         
+                         <div class="item">
+                             <div>
+                                 <div class="item-name">CHICKEN BACON RANCH</div>
+                                 <div class="item-desc">Chicken, bacon, ranch & Provel cheese</div>
+                             </div>
+                             <div class="item-price">10.99</div>
+                         </div>
+
+                         <div class="item">
+                             <div>
+                                 <div class="item-name">DOUBLE PEPPERONI</div>
+                                 <div class="item-desc">Loads of pepperoni, pizza sauce & Provel cheese</div>
+                             </div>
+                             <div class="item-price">9.99</div>
+                         </div>
+
+                         <div class="item">
+                             <div>
+                                 <div class="item-name">BUFFALO CHICKEN <span class="favorite-tag">FAVORITE</span></div>
+                                 <div class="item-desc">Buffalo chicken, red onion, ranch & Provel cheese</div>
+                             </div>
+                             <div class="item-price">10.99</div>
+                         </div>
+                     </div>
+                     <div class="image-container" style="margin-top: 0;">
+                         <img src="https://loremflickr.com/600/300/sandwich?random=2" alt="Crunchimo">
+                     </div>
+                 </div>
+             </div>
+             
+             <!-- BUILD YOUR OWN SECTION (Spans middle & right) -->
+             <div class="build-your-own-box">
+                 <div class="byo-title">BUILD<br>YOUR<br>OWN</div>
+                 <div style="display: flex; flex-direction: column; flex: 1;">
+                     <div class="byo-content">
+                         <div class="byo-col">
+                             <div class="byo-header">PIZZA</div>
+                             <div class="pizza-sizes" style="justify-content: flex-end; padding-right: 0;">
+                                 <span>10"</span> | <span>12"</span> | <span>14"</span> | <span>16"</span>
+                             </div>
+                             <div class="byo-pizza-row">
+                                 <span style="font-weight:bold;">1 TOPPING PIZZA</span>
+                                 <span>10.95 | 13.95 | 16.95 | 19.95</span>
+                             </div>
+                             <div style="text-align: right; font-size: 0.8vw; color: #555; margin-bottom: 1vh;">850-2160 CAL</div>
+                             
+                             <div class="byo-pizza-row">
+                                 <span>ADDITIONAL TOPPINGS</span>
+                                 <span>1.75 | 2.20 | 2.60 | 3.00</span>
+                             </div>
+                             
+                             <div class="byo-pizza-row" style="margin-top: 1vh;">
+                                 <span style="color:#2e8b57; font-weight:bold;">CAULIFLOWER CRUST* <br><span style="font-size:0.7vw; font-weight:normal;">(AVAILABLE IN 10" ONLY)</span></span>
+                                 <span>+3.00</span>
+                             </div>
+                         </div>
+                         <div class="byo-col">
+                             <div class="byo-header">CRUNCHIMOS</div>
+                             <p style="font-size: 0.9vw; text-align: center; margin-bottom: 1vh;">
+                                 Your choice of sauce and one topping,<br>plus plenty of Provel cheese.<br>
+                                 *Sausage and Hamburger not available
+                             </p>
+                             <div style="text-align: center; font-weight: bold; font-size: 1vw;">
+                                 STARTING AT 9.99<br>
+                                 EXTRA TOPPINGS 2.00 EACH<br>
+                                 (UP TO 3)
+                             </div>
+                         </div>
+                     </div>
+                     
+                     <div class="toppings-section">
+                         <div class="toppings-title">TOPPINGS</div>
+                         <div class="toppings-list">
+                             <div>SAUSAGE</div>
+                             <div>CANADIAN BACON</div>
+                             <div>GREEN PEPPER</div>
+                             <div>ANCHOVY</div>
+                             <div>HAMBURGER</div>
+                             <div>ONION</div>
+                             <div>TOMATO</div>
+                             <div>BLACK OLIVE</div>
+                             <div>CHICKEN</div>
+                             <div>PEPPERONCINI</div>
+                             <div>JALAPENO</div>
+                             <div>PINEAPPLE</div>
+                             <div>BACON</div>
+                             <div>MUSHROOM</div>
+                             <div>BANANA PEPPER</div>
+                             <div>EXTRA CHEESE</div>
+                             <div>PEPPERONI</div>
+                         </div>
+                     </div>
+                 </div>
+             </div>
+             
+             <div class="fine-print">
+                 *Imo's Cauliflower Crust is gluten-friendly. Because it is prepared in kitchens where gluten is present, we cannot ensure its safety for those with severe sensitivities.
+             </div>
+        </div>
+    </div>
+
+</body>
+</html>
