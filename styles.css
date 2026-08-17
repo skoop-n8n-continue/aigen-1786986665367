@@ -117,27 +117,13 @@ body {
   margin-bottom: 0.8vw;
 }
 
-.mt-3 {
-  margin-top: 1.5vw;
-}
-.mt-2 {
-  margin-top: 1vw;
-}
-.mt-1 {
-  margin-top: 0.5vw;
-}
-.red-text {
-  color: #da291c;
-}
-.green-text {
-  color: #388e3c;
-}
-.font-bold {
-  font-weight: 700;
-}
-.text-sm {
-  font-size: 0.85vw;
-}
+.mt-3 { margin-top: 1.5vw; }
+.mt-2 { margin-top: 1vw; }
+.mt-1 { margin-top: 0.5vw; }
+.red-text { color: #da291c; }
+.green-text { color: #388e3c; }
+.font-bold { font-weight: 700; }
+.text-sm { font-size: 0.85vw; }
 
 /* Multi-Price (like Apps / Wings) */
 .multi-price {
@@ -254,6 +240,7 @@ body {
   color: #333;
 }
 
+
 /* Desserts / Sandwiches / Pastas */
 .center-price .item-price {
   text-align: center;
@@ -345,6 +332,7 @@ body {
   font-size: 0.9vw;
   line-height: 1.3;
 }
+
 
 /* Drinks Section */
 .drinks-box {
