@@ -29,7 +29,7 @@ body {
 .grid-layout-p1 {
   display: grid;
   grid-template-columns: 1fr 1.05fr 1fr;
-  grid-template-rows: 1fr;
+  grid-template-rows: auto 1fr;
   gap: 1.5vw;
   height: 100%;
 }
@@ -64,20 +64,39 @@ body {
   letter-spacing: 1px;
 }
 
-.section-content {
-  padding: 1vw 1.5vw;
-}
-
 .menu-item {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: start;
   margin-bottom: 0.9vw;
-  display: flex;
-  flex-direction: column;
 }
-
 .item-main {
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
   display: flex;
   align-items: center;
   gap: 0.5vw;
+}
+.item-desc {
+  grid-column: 1 / 2;
+  grid-row: 2 / 3;
+  font-size: 0.75vw;
+  color: #666;
+  margin-top: 0.1vw;
+  line-height: 1.2;
+}
+.item-price {
+  grid-column: 2 / 3;
+  grid-row: 1 / 2;
+  font-weight: 700;
+  font-size: 0.95vw;
+  text-align: right;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.section-content {
+  padding: 1vw 1.5vw;
 }
 
 .item-name {
@@ -94,19 +113,6 @@ body {
   border-radius: 2px;
   font-weight: 700;
   vertical-align: middle;
-}
-
-.item-desc {
-  font-size: 0.75vw;
-  color: #666;
-  margin-top: 0.1vw;
-  line-height: 1.2;
-}
-
-.item-price {
-  font-weight: 700;
-  font-size: 0.95vw;
-  margin-top: 0.2vw;
 }
 
 .item-subtitle {
@@ -143,6 +149,7 @@ body {
 .multi-price {
   display: flex;
   gap: 1vw;
+  justify-content: flex-end;
 }
 .multi-price span {
   display: inline-block;
@@ -170,25 +177,7 @@ body {
   text-align: center;
 }
 
-.pizza-item {
-  position: relative;
-}
-.pizza-price {
-  display: flex;
-  justify-content: space-between;
-  width: 60%;
-  align-self: flex-end;
-  margin-top: -1.2vw; /* pull up */
-  padding-right: 0.5vw;
-}
-.pizza-price span {
-  width: 25%;
-  text-align: center;
-}
-.pizza-item .item-desc {
-  width: 40%;
-  padding-right: 1vw;
-}
+.pizza-item 
 
 /* Salad Layouts */
 .salad-header {
@@ -204,29 +193,8 @@ body {
   width: 50%;
   text-align: center;
 }
-.salad-item {
-  position: relative;
-}
-.salad-price {
-  display: flex;
-  justify-content: space-between;
-  width: 45%;
-  align-self: flex-end;
-  margin-top: -1.2vw;
-}
-.salad-item.single-line .salad-price {
-  margin-top: -1.2vw;
-}
-.salad-price span {
-  width: 50%;
-  text-align: center;
-}
-.salad-item .item-desc {
-  width: 55%;
-  padding-right: 1vw;
-}
 
-.add-chicken-row {
+.salad-item.single-line .salad-item .add-chicken-row {
   display: flex;
   align-items: center;
   font-size: 0.85vw;
@@ -252,25 +220,6 @@ body {
   width: 50%;
   text-align: center;
   color: #333;
-}
-
-.center-price {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-}
-.center-price .item-price {
-  align-self: flex-end;
-  text-align: right;
-}
-.center-price .item-desc {
-  width: 100%;
-}
-
-/* Build Your Own Box */
-.byo-box {
-  width: 100%;
-  display: flex;
 }
 
 .byo-title-col {
@@ -446,4 +395,38 @@ body {
   font-weight: normal;
   font-size: 0.75vw;
   display: block;
+}
+
+/* Pizza Items */
+.pizza-item {
+  grid-template-columns: 40% 60%;
+}
+.pizza-price {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding-right: 0.5vw;
+  margin-top: 0 !important; /* override pull up */
+}
+.pizza-item .item-desc {
+  padding-right: 1vw;
+}
+
+/* Salad Items */
+.salad-item {
+  grid-template-columns: 55% 45%;
+}
+.salad-price {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 0 !important; /* override pull up */
+}
+.salad-item .item-desc {
+  padding-right: 1vw;
+}
+
+.byo-box {
+  width: 100%;
+  display: flex;
 }
