@@ -29,7 +29,7 @@ body {
 
 .grid-layout-p1 {
     display: grid;
-    grid-template-columns: 1fr 1.1fr 1fr;
+    grid-template-columns: 1.1fr 1.25fr 1fr;
     grid-template-rows: auto 1fr;
     gap: 1.5vw;
     height: 100%;
@@ -37,7 +37,7 @@ body {
 
 .grid-layout-p2 {
     display: grid;
-    grid-template-columns: 1.1fr 1.1fr 1fr;
+    grid-template-columns: 1.2fr 1.1fr 1fr;
     gap: 1.5vw;
     height: 100%;
 }
@@ -80,7 +80,7 @@ body {
     display: flex;
     align-items: center;
     gap: 0.5vw;
-    width: 75%;
+    width: 70%;
 }
 
 .item-name {
@@ -107,10 +107,13 @@ body {
 }
 
 .item-price {
+    min-width: 30%;
+    white-space: nowrap;
+    min-width: fit-content;
     font-weight: 700;
     font-size: 1vw;
     text-align: right;
-    width: 25%;
+    width: 30%;
     display: flex;
     justify-content: flex-end;
     gap: 0.5vw;
@@ -149,12 +152,14 @@ body {
 }
 
 .pizza-item .item-main { width: 50%; }
-.pizza-item .item-price { width: 50%; font-size: 1vw; word-spacing: 0.3vw; justify-content: flex-end; font-weight: 500;}
+.pizza-item .item-price {
+    min-width: fit-content; width: 50%; font-size: 1vw; word-spacing: 0.3vw; justify-content: flex-end; font-weight: 500;}
 .pizza-item .item-desc { width: 60%; }
 
 /* Crunchimos layout */
 .crunchimo-item .item-main { width: 100%; }
-.crunchimo-item .item-price { display: none; } /* Prices in screenshot were somewhat vague, hidden or custom */
+.crunchimo-item .item-price {
+    min-width: fit-content; display: none; } /* Prices in screenshot were somewhat vague, hidden or custom */
 
 /* Build Your Own Box */
 .build-your-own-box {
@@ -230,7 +235,8 @@ body {
 .salad-header { justify-content: flex-end; width: 100%; }
 .salad-header span:last-child { width: 35%; text-align: right; }
 .salad-item .item-main { width: 65%; }
-.salad-item .item-price { width: 35%; justify-content: flex-end; word-spacing: 0.3vw; font-weight: 500; }
+.salad-item .item-price {
+    min-width: fit-content; width: 35%; justify-content: flex-end; word-spacing: 0.3vw; font-weight: 500; }
 .salad-item .item-desc { width: 70%; }
 
 .add-chicken-box {
@@ -304,6 +310,6 @@ body {
 .drinks-sizes { color: #d32f2f; font-weight: 700; font-size: 0.9vw; }
 .drink-name { font-weight: 700; width: 50%; }
 .drinks-row span:not(.drink-name), .drinks-sizes span:not(:first-child) {
-    width: 25%;
+    width: 30%;
     text-align: right;
 }
