@@ -1,475 +1,650 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <link rel="manifest" href="./manifest.json">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <link rel="manifest" href="./manifest.json" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Digital Menu Board</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;700&family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
-</head>
-<body>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;700&family=Roboto:wght@400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
     <div class="menu-container">
-
-        <!-- PAGE 1 -->
-        <div class="menu-page" id="page1">
-            <div class="grid-layout-p1">
-                <!-- Column 1 -->
-                <div class="col-left">
-                    <div class="section-box">
-                        <div class="section-header">APPETIZERS</div>
-                        <div class="section-content">
-                            <div class="menu-item">
-                                <div class="item-main">
-                                    <span class="item-name">TOASTED RAVIOLI</span> <span class="badge">FAVORITE</span>
-                                </div>
-                                <div class="item-desc">With a side of meat sauce</div>
-                                <div class="item-price"><span>(8) 8.05</span> <span>(24) 22.80</span></div>
-                            </div>
-                            <div class="menu-item">
-                                <div class="item-main">
-                                    <span class="item-name">GARLIC CHEESE BREAD</span> <span class="badge">FAVORITE</span>
-                                </div>
-                                <div class="item-price"><span>4.70</span></div>
-                            </div>
-                            <div class="menu-item">
-                                <div class="item-main">
-                                    <span class="item-name">PROVEL BITES</span> <span class="badge">FAVORITE</span>
-                                </div>
-                                <div class="item-desc">With a side of meat sauce</div>
-                                <div class="item-price"><span>(16) 8.00</span></div>
-                            </div>
-                            <div class="menu-item">
-                                <div class="item-main">
-                                    <span class="item-name">IMO FRIES</span>
-                                </div>
-                                <div class="item-price"><span>4.45</span></div>
-                            </div>
-                            <div class="menu-item">
-                                <div class="item-main">
-                                    <span class="item-name">MOZZARELLA STICKS</span>
-                                </div>
-                                <div class="item-desc">With a side of meat sauce</div>
-                                <div class="item-price"><span>(8) 8.00</span> <span>(24) 22.80</span></div>
-                            </div>
-                            <div class="menu-item">
-                                <div class="item-main">
-                                    <span class="item-name">BREAD BITES</span>
-                                </div>
-                                <div class="item-desc">With a side of meat sauce</div>
-                                <div class="item-price"><span>(6) 4.45</span></div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="section-box mt-3">
-                        <div class="section-header">WINGS & TENDERS</div>
-                        <div class="section-content">
-                            <div class="item-subtitle">SERVED WITH A SIDE OF DIPPING SAUCE</div>
-                            <div class="menu-item">
-                                <div class="item-main">
-                                    <span class="item-name">BONELESS WINGS</span>
-                                </div>
-                                <div class="item-desc">Hot, BBQ, Sweet & Tangy, Golden BBQ, Red Hot Riplets dry rub, or Plain</div>
-                                <div class="item-price"><span>(8) 10.20</span> <span>(24) 28.30</span></div>
-                            </div>
-                            <div class="menu-item">
-                                <div class="item-main">
-                                    <span class="item-name">CHICKEN WINGS</span>
-                                </div>
-                                <div class="item-desc">Hot, BBQ, Sweet & Tangy, Golden BBQ, Red Hot Riplets dry rub, or Plain</div>
-                                <div class="item-price"><span>(8) 12.35</span> <span>(24) 33.95</span></div>
-                            </div>
-                            <div class="menu-item">
-                                <div class="item-main">
-                                    <span class="item-name">CHICKEN TENDERS</span>
-                                </div>
-                                <div class="item-price"><span>(4) 8.59</span> <span>(12) 24.95</span></div>
-                            </div>
-                            <div class="menu-image mt-2">
-                                <img src="https://skoop-dev-code-agent.s3.us-east-1.amazonaws.com/n8n_continue%2Faigen-1786986665367%2Fassets%2Fchicken_wings_board-1786989782919.png" alt="Chicken Wings" style="width: 100%; max-width: 300px; display: block; margin: 0 auto;">
-                            </div>
-                        </div>
-                    </div>
+      <!-- PAGE 1 -->
+      <div class="menu-page" id="page1">
+        <div class="grid-layout-p1">
+          <!-- Column 1 -->
+          <div class="col-left">
+            <div class="section-box">
+              <div class="section-header">APPETIZERS</div>
+              <div class="section-content">
+                <div class="menu-item">
+                  <div class="item-main">
+                    <span class="item-name">TOASTED RAVIOLI</span>
+                    <span class="badge">FAVORITE</span>
+                  </div>
+                  <div class="item-desc">With a side of meat sauce</div>
+                  <div class="item-price multi-price">
+                    <span>(8) 8.05</span><span>(24) 22.80</span>
+                  </div>
                 </div>
-
-                <!-- Column 2 (Middle) -->
-                <div class="col-mid">
-                    <div class="section-box">
-                        <div class="section-header">PIZZAS</div>
-                        <div class="section-content">
-                            <div class="pizza-header-row">
-                                <span></span>
-                                <span class="pizza-sizes">10" | 12" | 14" | 16"</span>
-                            </div>
-
-                            <div class="menu-item pizza-item">
-                                <div class="item-main">
-                                    <span class="item-name">DELUXE</span> <span class="badge">FAVORITE</span>
-                                </div>
-                                <div class="item-desc">Sausage, bacon, mushroom, onion, & green pepper</div>
-                                <div class="item-price pizza-price">14.20 | 18.85 | 23.05 | 27.05</div>
-                            </div>
-                            <div class="menu-item pizza-item">
-                                <div class="item-main">
-                                    <span class="item-name">ALL MEAT</span>
-                                </div>
-                                <div class="item-desc">Sausage, Canadian bacon, bacon, & pepperoni</div>
-                                <div class="item-price pizza-price">14.20 | 18.85 | 23.05 | 27.05</div>
-                            </div>
-                            <div class="menu-item pizza-item">
-                                <div class="item-main">
-                                    <span class="item-name">SWEET HEAT</span>
-                                </div>
-                                <div class="item-desc">Chicken, onion, bacon, and sweet & tangy sauce</div>
-                                <div class="item-price pizza-price">13.99 | 17.99 | 21.99 | 25.99</div>
-                            </div>
-                            <div class="menu-item pizza-item">
-                                <div class="item-main">
-                                    <span class="item-name">VEGGIE</span>
-                                </div>
-                                <div class="item-desc">Mushroom, onion, green pepper, black olive, & tomato</div>
-                                <div class="item-price pizza-price">14.20 | 18.80 | 23.05 | 27.05</div>
-                            </div>
-                            <div class="menu-item pizza-item">
-                                <div class="item-main">
-                                    <span class="item-name">BBQ CHICKEN</span>
-                                </div>
-                                <div class="item-desc">BBQ sauce, chicken, & onion</div>
-                                <div class="item-price pizza-price">11.90 | 15.70 | 19.40 | 22.70</div>
-                            </div>
-                            <div class="menu-item pizza-item">
-                                <div class="item-main">
-                                    <span class="item-name">CHEESE</span>
-                                </div>
-                                <div class="item-desc">Covered in Provel cheese</div>
-                                <div class="item-price pizza-price">10.45 | 13.70 | 16.95 | 19.90</div>
-                            </div>
-                        </div>
-                    </div>
+                <div class="menu-item">
+                  <div class="item-main">
+                    <span class="item-name">GARLIC CHEESE BREAD</span>
+                    <span class="badge">FAVORITE</span>
+                  </div>
+                  <div class="item-price"><span>4.70</span></div>
                 </div>
-
-                <!-- Column 3 (Right) -->
-                <div class="col-right">
-                    <div class="section-box">
-                        <div class="section-header">CRUNCHIMOS</div>
-                        <div class="section-content">
-                            <div class="item-subtitle">SERVED WITH A SIDE OF DIPPING SAUCE</div>
-                            <div class="menu-item crunchimo-item">
-                                <div class="item-main">
-                                    <span class="item-name">CHICKEN BACON RANCH</span>
-                                </div>
-                                <div class="item-desc">Chicken, bacon, ranch & Provel cheese</div>
-                            </div>
-                            <div class="menu-item crunchimo-item">
-                                <div class="item-main">
-                                    <span class="item-name">DOUBLE PEPPERONI</span>
-                                </div>
-                                <div class="item-desc">Loads of pepperoni, pizza sauce & Provel cheese</div>
-                            </div>
-                            <div class="menu-item crunchimo-item">
-                                <div class="item-main">
-                                    <span class="item-name">BUFFALO CHICKEN</span> <span class="badge">FAVORITE</span>
-                                </div>
-                                <div class="item-desc">Buffalo chicken, red onion, ranch & Provel cheese</div>
-                            </div>
-                            <div class="menu-image mt-3" style="text-align: center;">
-                                <img src="https://skoop-dev-code-agent.s3.us-east-1.amazonaws.com/n8n_continue%2Faigen-1786986665367%2Fassets%2Fcrunchimos-1786989892091.png" alt="Crunchimos" style="width: 100%; max-width: 250px; display: inline-block;">
-                            </div>
-                        </div>
-                    </div>
+                <div class="menu-item">
+                  <div class="item-main">
+                    <span class="item-name">PROVEL BITES</span>
+                    <span class="badge">FAVORITE</span>
+                  </div>
+                  <div class="item-desc">With a side of meat sauce</div>
+                  <div class="item-price multi-price">
+                    <span></span><span>(16) 8.00</span>
+                  </div>
                 </div>
-
-                <!-- Bottom Full Width row -->
-                <div class="col-full mt-3">
-                    <div class="build-your-own-box">
-                        <div class="byo-title">
-                            BUILD<br>YOUR<br>OWN
-                        </div>
-                        <div class="byo-pizza-details">
-                            <div class="byo-section-title">PIZZA</div>
-                            <div class="pizza-header-row byo-sizes">
-                                <span></span>
-                                <span class="pizza-sizes">10" | 12" | 14" | 16"</span>
-                            </div>
-                            <div class="byo-row">
-                                <span class="byo-name">1 TOPPING PIZZA</span>
-                                <span class="byo-prices">10.45 | 13.70 | 16.95 | 19.90</span>
-                            </div>
-                            <div class="byo-row">
-                                <span class="byo-name">ADDITIONAL TOPPINGS</span>
-                                <span class="byo-prices">1.55 | 2.00 | 2.40 | 2.80</span>
-                            </div>
-                            <div class="byo-row cauliflower">
-                                <span class="byo-name green-text">CAULIFLOWER CRUST*<br><small>(AVAILABLE IN 10" ONLY)</small></span>
-                                <span class="byo-prices">+3.00</span>
-                            </div>
-                            <div class="toppings-list mt-2">
-                                <div class="toppings-title">TOPPINGS</div>
-                                <div class="toppings-grid">
-                                    <div>SAUSAGE<br>HAMBURGER<br>CHICKEN<br>BACON<br>PEPPERONI</div>
-                                    <div>CANADIAN BACON<br>ONION<br>PEPPERONCINI<br>MUSHROOM</div>
-                                    <div>GREEN PEPPER<br>TOMATO<br>JALAPENO<br>BANANA PEPPER</div>
-                                    <div>ANCHOVY<br>BLACK OLIVE<br>PINEAPPLE<br>EXTRA CHEESE</div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="byo-crunchimos">
-                            <div class="byo-section-title">CRUNCHIMOS</div>
-                            <div class="item-desc byo-desc">Your choice of sauce and one topping, plus plenty of Provel cheese.<br><small>*Sausage and Hamburger not available</small></div>
-                            <div class="byo-crunch-price mt-3">
-                                STARTING AT 9.99<br>
-                                EXTRA TOPPINGS 2.00 EACH<br>
-                                (UP TO 3)
-                            </div>
-                        </div>
-                    </div>
+                <div class="menu-item">
+                  <div class="item-main">
+                    <span class="item-name">IMO FRIES</span>
+                  </div>
+                  <div class="item-price"><span>4.45</span></div>
                 </div>
+                <div class="menu-item">
+                  <div class="item-main">
+                    <span class="item-name">MOZZARELLA STICKS</span>
+                  </div>
+                  <div class="item-desc">With a side of meat sauce</div>
+                  <div class="item-price multi-price">
+                    <span>(8) 8.00</span><span>(24) 22.80</span>
+                  </div>
+                </div>
+                <div class="menu-item">
+                  <div class="item-main">
+                    <span class="item-name">BREAD BITES</span>
+                  </div>
+                  <div class="item-desc">With a side of meat sauce</div>
+                  <div class="item-price multi-price">
+                    <span></span><span>(6) 4.45</span>
+                  </div>
+                </div>
+              </div>
             </div>
-        </div>
 
-        <!-- PAGE 2 -->
-        <div class="menu-page" id="page2" style="display:none;">
-            <div class="grid-layout-p2">
-                <!-- Column 1 -->
-                <div class="col-left">
-                    <div class="section-box">
-                        <div class="section-header">SANDWICHES</div>
-                        <div class="section-content">
-                            <div class="menu-item">
-                                <div class="item-main">
-                                    <span class="item-name">IMO'S EXTRA SPECIAL</span> <span class="badge">FAVORITE</span>
-                                </div>
-                                <div class="item-desc">Roast beef, ham, salami, cheese, lettuce, tomato, pickle & dressing</div>
-                                <div class="item-price"><span>9.40</span></div>
-                            </div>
-                            <div class="menu-item">
-                                <div class="item-main">
-                                    <span class="item-name">TURKEY CLUB</span>
-                                </div>
-                                <div class="item-desc">Turkey, bacon, cheese, lettuce, tomato & dressing</div>
-                                <div class="item-price"><span>9.40</span></div>
-                            </div>
-                            <div class="menu-item">
-                                <div class="item-main">
-                                    <span class="item-name">ROAST BEEF & CHEESE</span>
-                                </div>
-                                <div class="item-desc">With pickles & pepperoncini peppers</div>
-                                <div class="item-price"><span>9.40</span></div>
-                            </div>
-                            <div class="menu-item">
-                                <div class="item-main">
-                                    <span class="item-name">MEATBALL & CHEESE</span>
-                                </div>
-                                <div class="item-price"><span>9.40</span></div>
-                            </div>
-                            <div class="menu-item">
-                                <div class="item-main">
-                                    <span class="item-name">HAM & CHEESE</span>
-                                </div>
-                                <div class="item-price"><span>9.40</span></div>
-                            </div>
-                            <div class="menu-item">
-                                <div class="item-main">
-                                    <span class="item-name">CRISPY CHICKEN CLUB</span>
-                                </div>
-                                <div class="item-desc">Chicken tenders, cheese, bacon, lettuce, tomato & ranch dressing</div>
-                                <div class="item-price"><span>9.40</span></div>
-                            </div>
-                            <div class="menu-item">
-                                <div class="item-main">
-                                    <span class="item-name">B.L.T.</span>
-                                </div>
-                                <div class="item-desc">Bacon, lettuce, tomato, cheese, & dressing</div>
-                                <div class="item-price"><span>9.40</span></div>
-                            </div>
-                            <div class="menu-item">
-                                <div class="item-main">
-                                    <span class="item-name">SALAMI & CHEESE</span>
-                                </div>
-                                <div class="item-price"><span>9.40</span></div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="drinks-box section-box mt-3">
-                        <div class="section-content">
-                            <div class="section-header inline-header">DRINKS</div>
-                            <div class="drinks-content">
-                                <div class="drinks-logo">
-                                    <div class="pepsi-circle">PEPSI</div>
-                                </div>
-                                <div class="drinks-pricing">
-                                    <div class="drinks-sizes">
-                                        <span></span>
-                                        <span>Med</span>
-                                        <span>32oz</span>
-                                    </div>
-                                    <div class="drinks-row">
-                                        <span class="drink-name">FOUNTAIN</span>
-                                        <span>2.35</span>
-                                        <span>2.55</span>
-                                    </div>
-                                    <div class="drinks-sizes mt-1">
-                                        <span></span>
-                                        <span>20oz</span>
-                                        <span>2L</span>
-                                    </div>
-                                    <div class="drinks-row">
-                                        <span class="drink-name">BOTTLED</span>
-                                        <span>2.60</span>
-                                        <span>3.95</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+            <div class="section-box mt-3">
+              <div class="section-header">WINGS & TENDERS</div>
+              <div class="section-content">
+                <div class="item-subtitle">
+                  SERVED WITH A SIDE OF DIPPING SAUCE
                 </div>
-
-                <!-- Column 2 (Middle) -->
-                <div class="col-mid">
-                    <div class="section-box">
-                        <div class="section-header">SALADS</div>
-                        <div class="section-content">
-                            <div class="pizza-header-row salad-header">
-                                <span></span>
-                                <span>HALF | WHOLE</span>
-                            </div>
-
-                            <div class="menu-item salad-item">
-                                <div class="item-main">
-                                    <span class="item-name">HOUSE</span>
-                                </div>
-                                <div class="item-price salad-price">4.45 | 6.55</div>
-                            </div>
-                            <div class="menu-item salad-item">
-                                <div class="item-main">
-                                    <span class="item-name">CHEF</span> <span class="badge">FAVORITE</span>
-                                </div>
-                                <div class="item-desc">Salami, ham, roast beef, Provel cheese, & egg</div>
-                                <div class="item-price salad-price">6.25 | 9.40</div>
-                            </div>
-                            <div class="menu-item salad-item">
-                                <div class="item-main">
-                                    <span class="item-name">CAESAR SALAD</span>
-                                </div>
-                                <div class="item-desc">Romaine, shredded parmesan, & croutons</div>
-                                <div class="item-price salad-price">4.95 | 7.30</div>
-                            </div>
-                            <div class="menu-item salad-item">
-                                <div class="item-main">
-                                    <span class="item-name">DELUXE</span>
-                                </div>
-                                <div class="item-desc">Pepperoni, black olives, & Provel cheese</div>
-                                <div class="item-price salad-price">5.20 | 8.35</div>
-                            </div>
-
-                            <div class="add-chicken-box mt-2">
-                                <div class="add-c-title red-text">ADD CHICKEN</div>
-                                <div class="add-c-prices">
-                                    <div class="ac-row"><span>GRILLED</span><span>1.00</span><span>2.00</span></div>
-                                    <div class="ac-row"><span>CRISPY</span><span>1.50</span><span>3.00</span></div>
-                                </div>
-                            </div>
-
-                            <div class="dressings-box mt-3">
-                                <div class="d-title red-text">DRESSINGS & DIPPING SAUCES</div>
-                                <div class="d-grid mt-1">
-                                    <div>IMO'S ITALIAN<br>IMO'S VINAIGRETTE<br>IMO'S CREAMY GARLIC</div>
-                                    <div>RANCH<br>BLUE CHEESE<br>HONEY MUSTARD</div>
-                                    <div>CAESAR<br>FRENCH<br>IMO'S SWEET & TANGY SAUCE</div>
-                                </div>
-                            </div>
-
-                            <div class="extras red-text font-bold mt-2">EXTRAS STARTING AT .75</div>
-                            <div class="menu-image mt-3" style="text-align: center;">
-                                <img src="https://skoop-dev-code-agent.s3.us-east-1.amazonaws.com/n8n_continue%2Faigen-1786986665367%2Fassets%2Fsub_sandwich-1786989838459.png" alt="Sub Sandwich and Salad" style="width: 100%; max-width: 380px; display: inline-block;">
-                            </div>
-                        </div>
-                    </div>
+                <div class="menu-item">
+                  <div class="item-main">
+                    <span class="item-name">BONELESS WINGS</span>
+                  </div>
+                  <div class="item-desc">
+                    Hot, BBQ, Sweet & Tangy, Golden BBQ, Red Hot Riplets dry
+                    rub, or Plain
+                  </div>
+                  <div class="item-price multi-price">
+                    <span>(8) 10.20</span><span>(24) 28.30</span>
+                  </div>
                 </div>
-
-                <!-- Column 3 (Right) -->
-                <div class="col-right">
-                    <div class="section-box">
-                        <div class="section-header">PASTAS</div>
-                        <div class="section-content">
-                            <div class="item-subtitle">SERVED WITH A HALF ORDER OF GARLIC BREAD.<br>UPGRADE TO GARLIC CHEESE BREAD FOR .55</div>
-                            <div class="menu-item">
-                                <div class="item-main">
-                                    <span class="item-name">BAKED LASAGNA</span> <span class="badge">FAVORITE</span>
-                                </div>
-                                <div class="item-price"><span>9.95</span></div>
-                            </div>
-                            <div class="menu-item">
-                                <div class="item-main">
-                                    <span class="item-name">BAKED SPAGHETTI</span>
-                                </div>
-                                <div class="item-desc">Baked pasta with meat sauce and melted cheese</div>
-                                <div class="item-price"><span>9.40</span></div>
-                            </div>
-                            <div class="menu-item">
-                                <div class="item-main">
-                                    <span class="item-name">BAKED MOSTACCIOLI</span>
-                                </div>
-                                <div class="item-price"><span>9.40</span></div>
-                            </div>
-                            <div class="add-meatballs red-text font-bold mt-1 text-sm">
-                                ADD HOMEMADE MEATBALLS <span style="float:right; color:#333;">(2) 2.99</span><br>
-                                <span style="color:#555; font-weight:normal; font-size:12px;">Baked pasta with meat sauce and melted cheese</span>
-                            </div>
-                            <div class="menu-image mt-3" style="text-align: center;">
-                                <img src="https://skoop-dev-code-agent.s3.us-east-1.amazonaws.com/n8n_continue%2Faigen-1786986665367%2Fassets%2Fbaked_pasta-1786989906587.png" alt="Baked Pasta" style="width: 100%; max-width: 220px; display: inline-block;">
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="section-box mt-3">
-                        <div class="section-header">DESSERTS</div>
-                        <div class="section-content">
-                            <div class="menu-item">
-                                <div class="item-main">
-                                    <span class="item-name">GOOEY BUTTER CAKE</span> <span class="badge">FAVORITE</span>
-                                </div>
-                                <div class="item-price"><span>4.95</span></div>
-                            </div>
-                            <div class="menu-item">
-                                <div class="item-main">
-                                    <span class="item-name">CINNIMOS</span>
-                                </div>
-                                <div class="item-price"><span>4.70</span></div>
-                            </div>
-                            <div class="menu-item">
-                                <div class="item-main">
-                                    <span class="item-name">CHEESECAKE</span>
-                                </div>
-                                <div class="item-price"><span>4.15</span></div>
-                            </div>
-                            <div class="menu-item">
-                                <div class="item-main">
-                                    <span class="item-name">BROWNIE</span>
-                                </div>
-                                <div class="item-price"><span>4.95</span></div>
-                            </div>
-                        </div>
-                    </div>
+                <div class="menu-item">
+                  <div class="item-main">
+                    <span class="item-name">CHICKEN WINGS</span>
+                  </div>
+                  <div class="item-desc">
+                    Hot, BBQ, Sweet & Tangy, Golden BBQ, Red Hot Riplets dry
+                    rub, or Plain
+                  </div>
+                  <div class="item-price multi-price">
+                    <span>(8) 12.35</span><span>(24) 33.95</span>
+                  </div>
                 </div>
+                <div class="menu-item">
+                  <div class="item-main">
+                    <span class="item-name">CHICKEN TENDERS</span>
+                  </div>
+                  <div class="item-price multi-price">
+                    <span>(4) 8.59</span><span>(12) 24.95</span>
+                  </div>
+                </div>
+                <div class="menu-image mt-2">
+                  <img
+                    src="https://skoop-dev-code-agent.s3.us-east-1.amazonaws.com/n8n_continue%2Faigen-1786986665367%2Fassets%2Fchicken_wings_board-1786989782919.png"
+                    alt="Chicken Wings"
+                    style="
+                      width: 100%;
+                      max-width: 300px;
+                      display: block;
+                      margin: 0 auto;
+                    "
+                  />
+                </div>
+              </div>
             </div>
+          </div>
+
+          <!-- Column 2 (Middle) -->
+          <div class="col-mid">
+            <div class="section-box">
+              <div class="section-header">PIZZAS</div>
+              <div class="section-content">
+                <div class="pizza-header-row">
+                  <span></span>
+                  <span class="pizza-sizes byo-sizes-header"
+                    ><span>10"</span><span>12"</span><span>14"</span
+                    ><span>16"</span></span
+                  >
+                </div>
+
+                <div class="menu-item pizza-item">
+                  <div class="item-main">
+                    <span class="item-name">DELUXE</span>
+                    <span class="badge">FAVORITE</span>
+                  </div>
+                  <div class="item-desc">
+                    Sausage, bacon, mushroom, onion, & green pepper
+                  </div>
+                  <div class="item-price pizza-price">
+                    <span>14.20</span><span>18.85</span><span>23.05</span
+                    ><span>27.05</span>
+                  </div>
+                </div>
+                <div class="menu-item pizza-item">
+                  <div class="item-main">
+                    <span class="item-name">ALL MEAT</span>
+                  </div>
+                  <div class="item-desc">
+                    Sausage, Canadian bacon, bacon, & pepperoni
+                  </div>
+                  <div class="item-price pizza-price">
+                    <span>14.20</span><span>18.85</span><span>23.05</span
+                    ><span>27.05</span>
+                  </div>
+                </div>
+                <div class="menu-item pizza-item">
+                  <div class="item-main">
+                    <span class="item-name">SWEET HEAT</span>
+                  </div>
+                  <div class="item-desc">
+                    Chicken, onion, bacon, and sweet & tangy sauce
+                  </div>
+                  <div class="item-price pizza-price">
+                    <span>13.99</span><span>17.99</span><span>21.99</span
+                    ><span>25.99</span>
+                  </div>
+                </div>
+                <div class="menu-item pizza-item">
+                  <div class="item-main">
+                    <span class="item-name">VEGGIE</span>
+                  </div>
+                  <div class="item-desc">
+                    Mushroom, onion, green pepper, black olive, & tomato
+                  </div>
+                  <div class="item-price pizza-price">
+                    <span>14.20</span><span>18.80</span><span>23.05</span
+                    ><span>27.05</span>
+                  </div>
+                </div>
+                <div class="menu-item pizza-item">
+                  <div class="item-main">
+                    <span class="item-name">BBQ CHICKEN</span>
+                  </div>
+                  <div class="item-desc">BBQ sauce, chicken, & onion</div>
+                  <div class="item-price pizza-price">
+                    <span>11.90</span><span>15.70</span><span>19.40</span
+                    ><span>22.70</span>
+                  </div>
+                </div>
+                <div class="menu-item pizza-item">
+                  <div class="item-main">
+                    <span class="item-name">CHEESE</span>
+                  </div>
+                  <div class="item-desc">Covered in Provel cheese</div>
+                  <div class="item-price pizza-price">
+                    <span>10.45</span><span>13.70</span><span>16.95</span
+                    ><span>19.90</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Column 3 (Right) -->
+          <div class="col-right">
+            <div class="section-box">
+              <div class="section-header">CRUNCHIMOS</div>
+              <div class="section-content">
+                <div class="item-subtitle">
+                  SERVED WITH A SIDE OF DIPPING SAUCE
+                </div>
+                <div class="menu-item crunchimo-item">
+                  <div class="item-main">
+                    <span class="item-name">CHICKEN BACON RANCH</span>
+                  </div>
+                  <div class="item-desc">
+                    Chicken, bacon, ranch & Provel cheese
+                  </div>
+                </div>
+                <div class="menu-item crunchimo-item">
+                  <div class="item-main">
+                    <span class="item-name">DOUBLE PEPPERONI</span>
+                  </div>
+                  <div class="item-desc">
+                    Loads of pepperoni, pizza sauce & Provel cheese
+                  </div>
+                </div>
+                <div class="menu-item crunchimo-item">
+                  <div class="item-main">
+                    <span class="item-name">BUFFALO CHICKEN</span>
+                    <span class="badge">FAVORITE</span>
+                  </div>
+                  <div class="item-desc">
+                    Buffalo chicken, red onion, ranch & Provel cheese
+                  </div>
+                </div>
+                <div class="menu-image mt-3" style="text-align: center">
+                  <img
+                    src="https://skoop-dev-code-agent.s3.us-east-1.amazonaws.com/n8n_continue%2Faigen-1786986665367%2Fassets%2Fcrunchimos-1786989892091.png"
+                    alt="Crunchimos"
+                    style="width: 100%; max-width: 250px; display: inline-block"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Bottom Full Width row -->
+          <div class="col-full mt-3">
+            <div class="build-your-own-box">
+              <div class="byo-title">BUILD<br />YOUR<br />OWN</div>
+              <div class="byo-pizza-details">
+                <div class="byo-section-title">PIZZA</div>
+                <div class="pizza-header-row byo-sizes">
+                  <span></span>
+                  <span class="pizza-sizes byo-sizes-header"
+                    ><span>10"</span><span>12"</span><span>14"</span
+                    ><span>16"</span></span
+                  >
+                </div>
+                <div class="byo-row">
+                  <span class="byo-name">1 TOPPING PIZZA</span>
+                  <span class="byo-prices pizza-price"
+                    ><span>10.45</span><span>13.70</span><span>16.95</span
+                    ><span>19.90</span></span
+                  >
+                </div>
+                <div class="byo-row">
+                  <span class="byo-name">ADDITIONAL TOPPINGS</span>
+                  <span class="byo-prices pizza-price"
+                    ><span>1.55</span><span>2.00</span><span>2.40</span
+                    ><span>2.80</span></span
+                  >
+                </div>
+                <div class="byo-row cauliflower">
+                  <span class="byo-name green-text"
+                    >CAULIFLOWER CRUST*<br /><small
+                      >(AVAILABLE IN 10" ONLY)</small
+                    ></span
+                  >
+                  <span
+                    class="byo-prices pizza-price"
+                    style="justify-content: flex-end"
+                    ><span></span><span></span><span></span
+                    ><span>+3.00</span></span
+                  >
+                </div>
+                <div class="toppings-list mt-2">
+                  <div class="toppings-title">TOPPINGS</div>
+                  <div class="toppings-grid">
+                    <div>
+                      SAUSAGE<br />HAMBURGER<br />CHICKEN<br />BACON<br />PEPPERONI
+                    </div>
+                    <div>
+                      CANADIAN BACON<br />ONION<br />PEPPERONCINI<br />MUSHROOM
+                    </div>
+                    <div>
+                      GREEN PEPPER<br />TOMATO<br />JALAPENO<br />BANANA PEPPER
+                    </div>
+                    <div>
+                      ANCHOVY<br />BLACK OLIVE<br />PINEAPPLE<br />EXTRA CHEESE
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="byo-crunchimos">
+                <div class="byo-section-title">CRUNCHIMOS</div>
+                <div class="item-desc byo-desc">
+                  Your choice of sauce and one topping, plus plenty of Provel
+                  cheese.<br /><small
+                    >*Sausage and Hamburger not available</small
+                  >
+                </div>
+                <div class="byo-crunch-price mt-3">
+                  STARTING AT 9.99<br />
+                  EXTRA TOPPINGS 2.00 EACH<br />
+                  (UP TO 3)
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
+      </div>
+
+      <!-- PAGE 2 -->
+      <div class="menu-page" id="page2" style="display: none">
+        <div class="grid-layout-p2">
+          <!-- Column 1 -->
+          <div class="col-left">
+            <div class="section-box">
+              <div class="section-header">SANDWICHES</div>
+              <div class="section-content">
+                <div class="menu-item">
+                  <div class="item-main">
+                    <span class="item-name">IMO'S EXTRA SPECIAL</span>
+                    <span class="badge">FAVORITE</span>
+                  </div>
+                  <div class="item-desc">
+                    Roast beef, ham, salami, cheese, lettuce, tomato, pickle &
+                    dressing
+                  </div>
+                  <div class="item-price"><span>9.40</span></div>
+                </div>
+                <div class="menu-item">
+                  <div class="item-main">
+                    <span class="item-name">TURKEY CLUB</span>
+                  </div>
+                  <div class="item-desc">
+                    Turkey, bacon, cheese, lettuce, tomato & dressing
+                  </div>
+                  <div class="item-price"><span>9.40</span></div>
+                </div>
+                <div class="menu-item">
+                  <div class="item-main">
+                    <span class="item-name">ROAST BEEF & CHEESE</span>
+                  </div>
+                  <div class="item-desc">
+                    With pickles & pepperoncini peppers
+                  </div>
+                  <div class="item-price"><span>9.40</span></div>
+                </div>
+                <div class="menu-item">
+                  <div class="item-main">
+                    <span class="item-name">MEATBALL & CHEESE</span>
+                  </div>
+                  <div class="item-price"><span>9.40</span></div>
+                </div>
+                <div class="menu-item">
+                  <div class="item-main">
+                    <span class="item-name">HAM & CHEESE</span>
+                  </div>
+                  <div class="item-price"><span>9.40</span></div>
+                </div>
+                <div class="menu-item">
+                  <div class="item-main">
+                    <span class="item-name">CRISPY CHICKEN CLUB</span>
+                  </div>
+                  <div class="item-desc">
+                    Chicken tenders, cheese, bacon, lettuce, tomato & ranch
+                    dressing
+                  </div>
+                  <div class="item-price"><span>9.40</span></div>
+                </div>
+                <div class="menu-item">
+                  <div class="item-main">
+                    <span class="item-name">B.L.T.</span>
+                  </div>
+                  <div class="item-desc">
+                    Bacon, lettuce, tomato, cheese, & dressing
+                  </div>
+                  <div class="item-price"><span>9.40</span></div>
+                </div>
+                <div class="menu-item">
+                  <div class="item-main">
+                    <span class="item-name">SALAMI & CHEESE</span>
+                  </div>
+                  <div class="item-price"><span>9.40</span></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="drinks-box section-box mt-3">
+              <div class="section-content">
+                <div class="section-header inline-header">DRINKS</div>
+                <div class="drinks-content">
+                  <div class="drinks-logo">
+                    <div class="pepsi-circle">PEPSI</div>
+                  </div>
+                  <div class="drinks-pricing">
+                    <div class="drinks-sizes">
+                      <span></span>
+                      <span>Med</span>
+                      <span>32oz</span>
+                    </div>
+                    <div class="drinks-row">
+                      <span class="drink-name">FOUNTAIN</span>
+                      <span>2.35</span>
+                      <span>2.55</span>
+                    </div>
+                    <div class="drinks-sizes mt-1">
+                      <span></span>
+                      <span>20oz</span>
+                      <span>2L</span>
+                    </div>
+                    <div class="drinks-row">
+                      <span class="drink-name">BOTTLED</span>
+                      <span>2.60</span>
+                      <span>3.95</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Column 2 (Middle) -->
+          <div class="col-mid">
+            <div class="section-box">
+              <div class="section-header">SALADS</div>
+              <div class="section-content">
+                <div class="pizza-header-row salad-header">
+                  <span></span>
+                  <span><span>HALF</span><span>WHOLE</span></span>
+                </div>
+
+                <div class="menu-item salad-item">
+                  <div class="item-main">
+                    <span class="item-name">HOUSE</span>
+                  </div>
+                  <div class="item-price salad-price">
+                    <span>4.45</span><span>6.55</span>
+                  </div>
+                </div>
+                <div class="menu-item salad-item">
+                  <div class="item-main">
+                    <span class="item-name">CHEF</span>
+                    <span class="badge">FAVORITE</span>
+                  </div>
+                  <div class="item-desc">
+                    Salami, ham, roast beef, Provel cheese, & egg
+                  </div>
+                  <div class="item-price salad-price">
+                    <span>6.25</span><span>9.40</span>
+                  </div>
+                </div>
+                <div class="menu-item salad-item">
+                  <div class="item-main">
+                    <span class="item-name">CAESAR SALAD</span>
+                  </div>
+                  <div class="item-desc">
+                    Romaine, shredded parmesan, & croutons
+                  </div>
+                  <div class="item-price salad-price">
+                    <span>4.95</span><span>7.30</span>
+                  </div>
+                </div>
+                <div class="menu-item salad-item">
+                  <div class="item-main">
+                    <span class="item-name">DELUXE</span>
+                  </div>
+                  <div class="item-desc">
+                    Pepperoni, black olives, & Provel cheese
+                  </div>
+                  <div class="item-price salad-price">
+                    <span>5.20</span><span>8.35</span>
+                  </div>
+                </div>
+
+                <div class="add-chicken-box mt-2">
+                  <div class="add-c-title red-text">ADD CHICKEN</div>
+                  <div class="add-c-prices">
+                    <div class="ac-row">
+                      <span>GRILLED</span
+                      ><span class="ac-prices-right"
+                        ><span>1.00</span><span>2.00</span></span
+                      >
+                    </div>
+                    <div class="ac-row">
+                      <span>CRISPY</span
+                      ><span class="ac-prices-right"
+                        ><span>1.50</span><span>3.00</span></span
+                      >
+                    </div>
+                  </div>
+                </div>
+
+                <div class="dressings-box mt-3">
+                  <div class="d-title red-text">DRESSINGS & DIPPING SAUCES</div>
+                  <div class="d-grid mt-1">
+                    <div>
+                      IMO'S ITALIAN<br />IMO'S VINAIGRETTE<br />IMO'S CREAMY
+                      GARLIC
+                    </div>
+                    <div>RANCH<br />BLUE CHEESE<br />HONEY MUSTARD</div>
+                    <div>CAESAR<br />FRENCH<br />IMO'S SWEET & TANGY SAUCE</div>
+                  </div>
+                </div>
+
+                <div class="extras red-text font-bold mt-2">
+                  EXTRAS STARTING AT .75
+                </div>
+                <div class="menu-image mt-3" style="text-align: center">
+                  <img
+                    src="https://skoop-dev-code-agent.s3.us-east-1.amazonaws.com/n8n_continue%2Faigen-1786986665367%2Fassets%2Fsub_sandwich-1786989838459.png"
+                    alt="Sub Sandwich and Salad"
+                    style="width: 100%; max-width: 380px; display: inline-block"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Column 3 (Right) -->
+          <div class="col-right">
+            <div class="section-box">
+              <div class="section-header">PASTAS</div>
+              <div class="section-content">
+                <div class="item-subtitle">
+                  SERVED WITH A HALF ORDER OF GARLIC BREAD.<br />UPGRADE TO
+                  GARLIC CHEESE BREAD FOR .55
+                </div>
+                <div class="menu-item">
+                  <div class="item-main">
+                    <span class="item-name">BAKED LASAGNA</span>
+                    <span class="badge">FAVORITE</span>
+                  </div>
+                  <div class="item-price"><span>9.95</span></div>
+                </div>
+                <div class="menu-item">
+                  <div class="item-main">
+                    <span class="item-name">BAKED SPAGHETTI</span>
+                  </div>
+                  <div class="item-desc">
+                    Baked pasta with meat sauce and melted cheese
+                  </div>
+                  <div class="item-price"><span>9.40</span></div>
+                </div>
+                <div class="menu-item">
+                  <div class="item-main">
+                    <span class="item-name">BAKED MOSTACCIOLI</span>
+                  </div>
+                  <div class="item-price"><span>9.40</span></div>
+                </div>
+                <div class="add-meatballs red-text font-bold mt-1 text-sm">
+                  ADD HOMEMADE MEATBALLS
+                  <span style="float: right; color: #333">(2) 2.99</span><br />
+                  <span
+                    style="color: #555; font-weight: normal; font-size: 12px"
+                    >Baked pasta with meat sauce and melted cheese</span
+                  >
+                </div>
+                <div class="menu-image mt-3" style="text-align: center">
+                  <img
+                    src="https://skoop-dev-code-agent.s3.us-east-1.amazonaws.com/n8n_continue%2Faigen-1786986665367%2Fassets%2Fbaked_pasta-1786989906587.png"
+                    alt="Baked Pasta"
+                    style="width: 100%; max-width: 220px; display: inline-block"
+                  />
+                </div>
+              </div>
+            </div>
+
+            <div class="section-box mt-3">
+              <div class="section-header">DESSERTS</div>
+              <div class="section-content">
+                <div class="menu-item">
+                  <div class="item-main">
+                    <span class="item-name">GOOEY BUTTER CAKE</span>
+                    <span class="badge">FAVORITE</span>
+                  </div>
+                  <div class="item-price"><span>4.95</span></div>
+                </div>
+                <div class="menu-item">
+                  <div class="item-main">
+                    <span class="item-name">CINNIMOS</span>
+                  </div>
+                  <div class="item-price"><span>4.70</span></div>
+                </div>
+                <div class="menu-item">
+                  <div class="item-main">
+                    <span class="item-name">CHEESECAKE</span>
+                  </div>
+                  <div class="item-price"><span>4.15</span></div>
+                </div>
+                <div class="menu-item">
+                  <div class="item-main">
+                    <span class="item-name">BROWNIE</span>
+                  </div>
+                  <div class="item-price"><span>4.95</span></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
     <script src="script.js"></script>
-  <script>
-    if ('serviceWorker' in navigator) {
-      window.addEventListener('load', function () {
-        navigator.serviceWorker.register('./sw.js')
-          .then(function (reg) { console.log('[PWA] SW registered:', reg.scope); })
-          .catch(function (err) { console.warn('[PWA] SW registration failed:', err); });
-      });
-    }
-  </script>
-  <!-- skoop-prefetch -->
-  <script src="./skoop-prefetch.js" defer></script>
-</body>
+    <script>
+      if ("serviceWorker" in navigator) {
+        window.addEventListener("load", function () {
+          navigator.serviceWorker
+            .register("./sw.js")
+            .then(function (reg) {
+              console.log("[PWA] SW registered:", reg.scope);
+            })
+            .catch(function (err) {
+              console.warn("[PWA] SW registration failed:", err);
+            });
+        });
+      }
+    </script>
+    <!-- skoop-prefetch -->
+    <script src="./skoop-prefetch.js" defer></script>
+  </body>
 </html>
